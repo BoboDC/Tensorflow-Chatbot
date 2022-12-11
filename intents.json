@@ -1,0 +1,112 @@
+{"intents": [
+
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "What's up", "Hello", "Salut", "Good Morning", "Good Evening"],
+     "responses": ["Hello", "Hi", "Hi there"]
+    },
+    
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye", "Have a wonderful day"]
+    },
+    
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
+     "responses": ["My pleasure", "You're welcome!", "It's my job"]
+    },
+    
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "What is your role?" ],
+     "responses": ["I'm here to help you", "I'm a bot to answer your questions", "I know Science, ask me about the Universe", "I can help you with Science related questions"]
+    },
+    
+    {"tag": "help",
+    "patterns": ["Could you help me?", "Give me a hand please", "Can you help?", "I need help", "Support me please"],
+    "responses": ["Tell me how can I assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you", "I am here for you"]
+    },
+    
+    {"tag": "sun",
+    "patterns": ["Tell me about the sun", "What's to know about the sun?", "I want to learn about the sun"],
+    "responses": ["The Sun started as a cloud of dust and gas. It slowly formed a massive center and got hotter until it became the Sun.",
+                  "Sometimes gases on the Sun’s surface erupt, shooting far out into space. These are called solar flares. They can interfere with satellites meaning our phones, satnav and television might not work.",
+                  "The Sun’s light reaches the Earth in eight minutes",
+                  "The Sun is about 100 times wider than Earth and about 10 times wider than Jupiter, the biggest planet."]
+    },
+    
+    {"tag": "kirchoff",
+    "patterns": ["What is Kirchoff law?", "Are there two Kirchoff laws?", "Kirchoff Law"],
+    "responses": ["Kirchhoff's current law (1st Law) states that the current flowing into a node (or a junction) must be equal to the current flowing out of it. This is a consequence of charge conservation. Kirchhoff's voltage law (2nd Law) states that in any complete loop within a circuit, the sum of all voltages across components which supply electrical energy (such as cells or generators) must equal the sum of all voltages across the other components in the same loop. This law is a consequence of both charge conservation and the conservation of energy.",
+                  "Kirchhoff's first law is based on the conservation of charge because sum of current entering to the junction is equal to sum of current leaving the junction. Kirchhoff's second law states that the algebraic sum of potential drops in a closed circuit is zero. So, it is based on the conservation of energy."]
+    },
+    
+    {"tag": "dna",
+    "patterns": ["What is DNA?", "What does DNA stand for?", "DNA definition"],
+    "responses": ["DNA, or deoxyribonucleic acid, is the hereditary material in humans and almost all other organisms. Nearly every cell in a person’s body has the same DNA. Human DNA consists of about 3 billion bases, and more than 99 percent of those bases are the same in all people. The order, or sequence, of these bases determines the information available for building and maintaining an organism, similar to the way in which letters of the alphabet appear in a certain order to form words and sentences."]
+    },
+    
+    {"tag": "bones",
+    "patterns": ["How many bones do we have?", "How many bones does a human have", "What is the number of bones in humans"],
+    "responses": ["There are typically around 270 bones in human infants, which fuse to become 206 to 213 bones in the human adult. The reason for the variability in the number of bones is because some humans may have a varying number of ribs, vertebrae, and digits."]
+    },
+    
+    {"tag": "hardestsubstance",
+    "patterns": ["Is diamond the hardest substance?", "What is the hardest substance?", "What is the hardest mineral on Earth?"],
+    "responses": ["Diamond is the hardest naturally occurring substance found on earth."]
+    },
+    
+    {"tag": "rainbow",
+    "patterns": ["What colors are in the rainbow?", "How many colors in a rainbow?", "Rainbow colors"],
+    "responses": ["The colours of the rainbow are: Red, orange, yellow, green, blue, indigo, violet."]
+    },
+    
+    {"tag": "mpebma",
+    "patterns": ["What is the Mpemba effect?", "Explain the Mpemba effect", "How does Mpemba effect work"],
+    "responses": ["The Mpemba effect is the name given to the observation that a liquid (typically water) which is initially hot can freeze faster than the same liquid which begins cold, under otherwise similar conditions."]
+    },
+    
+    {"tag": "photosynthesis",
+    "patterns": ["How are plants breathing?", "What is photosynthesis?", "Which process is used by plants to convert light energy into chemical energy?"],
+    "responses": ["Photosynthesis is the process by which plants use sunlight, water, and carbon dioxide to create oxygen and energy in the form of sugar."]
+    },
+    
+    {"tag": "water",
+    "patterns": ["What is dihydrogen monoxide?", "What is H2O"],
+    "responses": ["Water"]
+    },
+    
+    {"tag": "astrolabe",
+    "patterns": ["What does astrolabe determine?", "What is astrolabe?", "What is the meaning of astrolabe?"],
+    "responses": ["It determines the altitude of an object in the sky eg: Sun & Stars."]
+    },
+    
+    {"tag": "schrodinger",
+    "patterns": ["What is the Schrodinger's cat?", "Explain Schrodinger's cat theorem", "Can you tell me the meaning of the Schrodinger's cat?"],
+    "responses": ["Schrodinger stated that if you place a cat and something that could kill the cat (a radioactive atom) in a box and sealed it, you would not know if the cat was dead or alive until you opened the box, so that until the box was opened, the cat was (in a sense) both dead and alive."]
+    },
+    
+    {"tag": "lightspeed",
+    "patterns": ["What is light speed?", "Value of light speed?", "Tell me the light speed number"],
+    "responses": ["299 792 458 m/s", "1 080 000 000 km/h"]
+    },
+    
+    {"tag": "quadratic",
+    "patterns": ["What is the quadratic formula?", "What is the quadratic equation", "what is the quadratic function"],
+    "responses": ["Quadratic equations are second-degree algebraic expressions and are of the form ax2 + bx + c = 0. The word Quadratic is derived from the word Quad which means square. In other words, a quadratic equation is an “equation of degree 2."]
+    },
+    
+    {"tag": "dcurrent",
+    "patterns": ["What is DC?", "What is Direct Current?", "Explain DC current"],
+    "responses": ["Direct current (DC) is one-directional flow of electric charge. An electrochemical cell is a prime example of DC power. Direct current may flow through a conductor such as a wire, but can also flow through semiconductors, insulators, or even through a vacuum as in electron or ion beams."]
+    },
+    
+    {"tag": "acurrent",
+    "patterns": ["What is AC?", "What is Alternative Current?", "Explain AC"],
+    "responses": ["Alternating current (AC) is an electric current which periodically reverses direction and changes its magnitude continuously with time in contrast to direct current (DC) which flows only in one direction. Alternating current is the form in which electric power is delivered to businesses and residences, and it is the form of electrical energy that consumers typically use when they plug kitchen appliances, televisions, fans and electric lamps into a wall socket."]
+    },
+    
+    {"tag": "joke",
+    "patterns": ["Tell me a joke", "I want to laugh", "What jokes do you know?"],
+    "responses": ["What did the science book say to the math book? You have got problems.", "Why are chemists so good at solving problems? They are always working with solutions.", "Why can you never trust atoms? They make up everything."]
+    }
+]
+}

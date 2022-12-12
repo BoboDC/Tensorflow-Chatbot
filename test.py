@@ -29,7 +29,7 @@ for intent in data['intents']:
     if intent['tag'] not in tags:
         tags.append(intent['tag'])
         
-num_classes = len(tags)
+classes = len(tags)
 dataset = pd.DataFrame({"greetings": greetings, "tags": greetingLabels})
 
 xData = dataset["greetings"]
@@ -51,8 +51,8 @@ model = load_model("model.h5")
 # t = "hello man"
 def chatting():
     while True:
-        print("User:", end=" ")
-        t = input()
+        # print("User:", end=" ")
+        t = input("User: ")
         encoded_text = tokenizer.texts_to_sequences([t])[0]
         encoded_text = np.array(encoded_text).reshape(-1)
         encoded_text = pad_sequences([encoded_text],input_shape)

@@ -107,6 +107,11 @@
     {"tag": "joke",
     "patterns": ["Tell me a joke", "I want to laugh", "What jokes do you know?"],
     "responses": ["What did the science book say to the math book? You have got problems.", "Why are chemists so good at solving problems? They are always working with solutions.", "Why can you never trust atoms? They make up everything."]
+    },
+    
+    {"tag": "unknown",
+    "patterns": [""],
+    "responses": ["You did not say anything that i understand", "You can talk to me", "I know only science"]
     }
 ]
 }

@@ -17,7 +17,7 @@ def execute(request: SimpleText, ray: OpenfabricExecutionRay) -> SimpleText:
     return SimpleText(dict(text=output))
 ```
 ## Constraints and restrictions
-You are free to use any package or library you see feet as long as you follow these rules:
+You are free to use any package or library you see fit as long as you follow these rules:
 * 👎 You can't call any external service (e.g. chatGPT) 
 * 👎 You can't copy and paste from other peoples work 
 

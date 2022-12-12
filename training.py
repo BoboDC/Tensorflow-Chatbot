@@ -27,7 +27,7 @@ for intent in data['intents']:
     if intent['tag'] not in tags:
         tags.append(intent['tag'])
         
-num_classes = len(tags)
+classes = len(tags)
 dataset = pd.DataFrame({"greetings": greetings, "tags": greetingLabels})
 
 xData = dataset["greetings"]
@@ -48,17 +48,17 @@ input_shape = x.shape[1]
 
 model = Sequential()
 model.add(Input(shape=(input_shape,)))
-model.add(Embedding(totalWords,10))
+model.add(Embedding(totalWords, 10))
 model.add(LSTM(128, return_sequences=True))
 model.add(LSTM(128, return_sequences=True))
 model.add(Flatten())
 model.add(Dense(units=50, activation='relu'))
-model.add(Dense(num_classes,activation="softmax"))
+model.add(Dense(classes, activation="softmax"))
 model.compile(loss="sparse_categorical_crossentropy",optimizer='adam',metrics=['accuracy'])
 model.summary()
 
 es = EarlyStopping(monitor='loss', mode='min', verbose=1, patience=30)
 mc = ModelCheckpoint('model.h5', monitor='accuracy', mode='max', verbose=1, save_best_only=True)
 
-train = model.fit(x, y, epochs=300, callbacks=[es,mc])
+train = model.fit(x, y, epochs=400, callbacks=[es,mc])
 

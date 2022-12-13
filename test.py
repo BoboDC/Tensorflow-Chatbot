@@ -2,14 +2,10 @@ import random
 import json 
 import numpy as np
 import pandas as pd 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Embedding, Input, LSTM, Flatten
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
 from keras.models import load_model, save_model
-from keras.callbacks import EarlyStopping, ModelCheckpoint
-import string
 
 file = open("intents.json")
 data = json.load(file)    

@@ -42,14 +42,14 @@ def chat(model, t):
     
     labelEnc = LabelEncoder()
     y = labelEnc.fit_transform(yData)
-    input_shape = x.shape[1]
+    xShape = x.shape[1]
     # t = "hello man"
 
-    encoded_text = tokenizer.texts_to_sequences([t])[0]
-    encoded_text = np.array(encoded_text).reshape(-1)
-    encoded_text = pad_sequences([encoded_text],input_shape)
+    tokenizedText = tokenizer.texts_to_sequences([t])[0]
+    tokenizedText = np.array(tokenizedText).reshape(-1)
+    tokenizedText = pad_sequences([tokenizedText],xShape)
     
-    prediction = model.predict(encoded_text, verbose=0)
+    prediction = model.predict(tokenizedText, verbose=0)
     prediction = prediction.argmax()
     response_tag = labelEnc.inverse_transform([prediction])[0]
     

@@ -41,7 +41,7 @@ x = pad_sequences(tokenSentence)
 
 labelEnc = LabelEncoder()
 y = labelEnc.fit_transform(yData)
-input_shape = x.shape[1]
+xShape = x.shape[1]
 
 model = load_model("model.h5")
 # t = "hello man"
@@ -49,19 +49,19 @@ def chatting():
     while True:
         # print("User:", end=" ")
         t = input("User: ")
-        encoded_text = tokenizer.texts_to_sequences([t])[0]
-        encoded_text = np.array(encoded_text).reshape(-1)
-        encoded_text = pad_sequences([encoded_text],input_shape)
+        tokenizedText = tokenizer.texts_to_sequences([t])[0]
+        tokenizedText = np.array(tokenizedText).reshape(-1)
+        tokenizedText = pad_sequences([tokenizedText],xShape)
 
-        prediction = model.predict(encoded_text, verbose=0)
+        prediction = model.predict(tokenizedText, verbose=0)
         prediction = prediction.argmax()
-        response_tag = labelEnc.inverse_transform([prediction])[0]
-        if response_tag == "goodbye":
+        responseClass = labelEnc.inverse_transform([prediction])[0]
+        if responseClass == "goodbye":
             print("Good Bye")
             break
 
         for i in data["intents"]: 
-            if i["tag"] == response_tag:
+            if i["tag"] == responseClass:
                 print("AI: ", random.choice(i["responses"]))
                 
     

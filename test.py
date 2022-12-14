@@ -56,9 +56,6 @@ def chatting():
         prediction = model.predict(tokenizedText, verbose=0)
         prediction = prediction.argmax()
         responseClass = labelEnc.inverse_transform([prediction])[0]
-        if responseClass == "goodbye":
-            print("Good Bye")
-            break
 
         for i in data["intents"]: 
             if i["tag"] == responseClass:
